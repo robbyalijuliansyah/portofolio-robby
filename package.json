@@ -1,0 +1,20 @@
+{
+    "name": "dw_uas_d1a240052_robbyalijuliansyah",
+    "version": "1.0.0",
+    "main": "tailwind.config.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "prettier": "^3.4.2",
+        "prettier-plugin-tailwindcss": "^0.6.9",
+        "tailwindcss": "^3.4.17"
+    },
+    "dependencies": {
+        "@emailjs/browser": "^4.4.1"
+    }
+}
