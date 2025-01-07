@@ -139,13 +139,13 @@ body {
 
 /* Batas Awal Efek Text Glow */
 #btn-shine {
-  position: absolute;
+  position: relative;
   top: 50px;
-  left: 195px;
+  left: 15%;
   transform: translate(-50%, -50%);
-  padding: 200px 100px;
+  padding: 20px 100px;
   color: black;
-  background: linear-gradient(to right, #9f9f9f 0, #fff 30%, #868686 100%);
+  background: linear-gradient(to right, #9f9f9f 0%, #fff 30%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -153,11 +153,25 @@ body {
   animation-fill-mode: forwards;
   -webkit-text-size-adjust: none;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 5vw; /* Menggunakan vw untuk font responsif */
   text-decoration: none;
   white-space: nowrap;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
+@media (max-width: 768px) {
+  #btn-shine {
+    font-size: 8vw; /* Ukuran font lebih besar untuk perangkat kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  #btn-shine {
+    font-size: 10vw; /* Ukuran font lebih besar untuk layar lebih kecil */
+  }
+}
+
+/* Animasi */
 @-moz-keyframes shine {
   0% {
     background-position: 0;
