@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //email.js
 function sendMessage() {
   (function(){
-    Emailjs.init("m7-xZoUufwocluYmo"); //Kunci Akun Publik
+    emailjs.init("QWlPZbgO_RvRI-S8R"); //Kunci Akun Publik
   })();
 
   var serviceID = "service_l7nzlon"; // Email Service ID
