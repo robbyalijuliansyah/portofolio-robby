@@ -156,7 +156,7 @@ body {
   font-size: 5vw; /* Menggunakan vw untuk font responsif */
   text-decoration: none;
   white-space: nowrap;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -411,4 +411,3 @@ ul {
   background-color: #24262a;
 }
 /* Icon End */
-
