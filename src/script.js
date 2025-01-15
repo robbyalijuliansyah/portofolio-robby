@@ -69,34 +69,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const delayBetweenWords = 1500;
 
   function typeEffect() {
-      const currentText = toRotate[index];
+    const currentText = toRotate[index];
 
-      if (isDeleting) {
-          rotateText.textContent = currentText.substring(0, textIndex--);
-          if (textIndex < 0) {
-              isDeleting = false;
-              index = (index + 1) % toRotate.length;
-              setTimeout(typeEffect, typingSpeed);
-          } else {
-              setTimeout(typeEffect, deletingSpeed);
-          }
+    if (isDeleting) {
+      rotateText.textContent = currentText.substring(0, textIndex--);
+      if (textIndex < 0) {
+        isDeleting = false;
+        index = (index + 1) % toRotate.length;
+        setTimeout(typeEffect, typingSpeed);
       } else {
-          rotateText.textContent = currentText.substring(0, textIndex++);
-          if (textIndex > currentText.length) {
-              isDeleting = true;
-              setTimeout(typeEffect, delayBetweenWords);
-          } else {
-              setTimeout(typeEffect, typingSpeed);
-          }
+        setTimeout(typeEffect, deletingSpeed);
       }
+    } else {
+      rotateText.textContent = currentText.substring(0, textIndex++);
+      if (textIndex > currentText.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, delayBetweenWords);
+      } else {
+        setTimeout(typeEffect, typingSpeed);
+      }
+    }
   }
 
-  typeEffect()
-}); 
+  typeEffect();
+});
 
 //email.js
 function sendMessage() {
-  (function(){
+  (function () {
     emailjs.init("QWlPZbgO_RvRI-S8R"); //Kunci Akun Publik
   })();
 
@@ -106,12 +106,15 @@ function sendMessage() {
   var params = {
     sendername: document.querySelector("#name").value,
     senderemail: document.querySelector("#email").value,
-    message: document.querySelector("#message").value
+    message: document.querySelector("#message").value,
   };
 
-  emailjs.send(serviceID, templateID, params)
-  .then(res => {
-    alert('Thank you,' + params['sendername'] + '! Yous message has been sent.');
-  })
-  .catch();
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      alert(
+        "Thank you," + params["sendername"] + "! Yous message has been sent."
+      );
+    })
+    .catch();
 }

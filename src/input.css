@@ -137,87 +137,7 @@ body {
 
 /* Batas Akhir Warna rotate Text */
 
-/* Batas Awal Efek Text Glow */
-#btn-shine {
-  position: relative;
-  top: 50px;
-  left: 15%;
-  transform: translate(-50%, -50%);
-  padding: 20px 100px;
-  color: black;
-  background: linear-gradient(to right, #9f9f9f 0%, #fff 30%);
-  background-position: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 5s infinite linear;
-  animation-fill-mode: forwards;
-  -webkit-text-size-adjust: none;
-  font-weight: 600;
-  font-size: 5vw; /* Menggunakan vw untuk font responsif */
-  text-decoration: none;
-  white-space: nowrap;
-  font-family: "Poppins", sans-serif;
-}
-
-@media (max-width: 768px) {
-  #btn-shine {
-    font-size: 8vw; /* Ukuran font lebih besar untuk perangkat kecil */
-  }
-}
-
-@media (max-width: 480px) {
-  #btn-shine {
-    font-size: 10vw; /* Ukuran font lebih besar untuk layar lebih kecil */
-  }
-}
-
-/* Animasi */
-@-moz-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-webkit-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-o-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-
-/* Batas Akhir Efek Text Glow */
+/* Awal btn */
 .btn-hs {
   width: 60px;
   height: 60px;
@@ -258,6 +178,32 @@ body {
   );
   transition: 0.5s;
 }
+/* Akhir btn */
+
+/* gradient text */
+#gradient {
+  background: linear-gradient(
+    to right,
+    #fc72ff,
+    #8f68ff,
+    #487bff,
+    #8f68ff,
+    #fc72ff
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+/* gradient text */
 
 /* Border Card Animation */
 .card {
