@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -357,3 +358,418 @@ ul {
   background-color: #24262a;
 }
 /* Icon End */
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+/* Setting Hero Awal */
+.wave {
+  font-size: 2em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.emoji {
+  display: inline-block;
+  animation: wave-animation 1s infinite; /* Animasi berulang */
+  transform-origin: 70% 70%; /* Titik poros animasi */
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+}
+/* Setting Hero Akhir */
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply origin-bottom-left -rotate-45;
+}
+/* Dark Mode */
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
+
+/* Batas Awal Gallery */
+.gallery {
+  padding: 150px 20px;
+  text-align: center;
+  background-color: #f4f4f9;
+}
+.gallery h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Batas Akhir Gallery */
+
+/* Batas Awal Warna rotate Text */
+#rotateText {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, blue, green, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-animation 3s infinite linear;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+#cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Batas Akhir Warna rotate Text */
+
+/* Batas Awal Efek Text Glow */
+#btn-shine {
+  position: relative;
+  top: 50px;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  padding: 20px 100px;
+  color: black;
+  background: linear-gradient(to right, #9f9f9f 0%, #fff 30%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 5vw; /* Menggunakan vw untuk font responsif */
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+  #btn-shine {
+    font-size: 8vw; /* Ukuran font lebih besar untuk perangkat kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  #btn-shine {
+    font-size: 10vw; /* Ukuran font lebih besar untuk layar lebih kecil */
+  }
+}
+
+/* Animasi */
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+/* Batas Akhir Efek Text Glow */
+.btn-hs {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 50px;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.1s;
+  margin: 10px auto;
+}
+
+.btn-hs::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(255, 94, 247, 1) 17.8%,
+    rgba(2, 245, 255, 1) 100.2%
+  );
+  filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.btn-hs:active {
+  transform: scale(0.9) rotate(3deg);
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(255, 94, 247, 1) 17.8%,
+    rgba(2, 245, 255, 1) 100.2%
+  );
+  transition: 0.5s;
+}
+
+/* Border Card Animation */
+.card {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #6a11cb, rgb(109, 172, 243), #6a11cb);
+  background-size: 200% 200%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  animation: border-animation 3s infinite;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+@keyframes border-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Border Card End*/
+
+/* Icon Start */
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.dark .icon-content a {
+  color: #fff;
+  background-color: #1e293b;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+.example-2 .icon-content a[data-social="tiktok"] .filled,
+.example-2 .icon-content a[data-social="tiktok"] ~ .tooltip {
+  background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="X"] .filled,
+.example-2 .icon-content a[data-social="X"] ~ .tooltip {
+  background-color: #24262a;
+}
+/* Icon End */
+>>>>>>> 5405f6317d85b0c210347785d91a2557a6d81658
